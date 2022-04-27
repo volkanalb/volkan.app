@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+
+
+<div class="container">
+  <h3>This is my blog</h3>
+  <p>I enjoy writing about all kinds of stuff, so please don't expect any kind of common theme here.</p>
+  <hr mt-5>
+  {% for post in site.posts %}
+
+    <article class="post mb-5 mt-5">
+
+      <h4 class="text-muted">{{ post.date | date: "%B %e, %Y" }}</h4>
+      <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+
+      <p class="entry">
+        {{ post.content | truncatewords:100 | strip_html}}
+      </p>
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      <br>
+      <br>
+
+    </article>
+    <hr>
+  {% endfor %}
+</div>
