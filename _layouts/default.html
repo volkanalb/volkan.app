@@ -30,9 +30,18 @@
         <script src='/{{ js_file }}' type="text/javascript"></script>
         {% endfor %}
     {% endif %}
-
-    <meta name="google-site-verification" content="5hPNIY_cvIoCAkAHJEd0Bzr1N5txJohoz1WS9VKS7Xc" />
+    
     {% seo %}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQF7JJH7MK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-PQF7JJH7MK');
+    </script>
   </head>
   <body>
 
